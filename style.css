@@ -1,13 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     display: grid;
     grid-template: 1fr 4fr/ 1fr 4fr;
     height: 100vh;
+    padding: 20px;
 }
 
 .sidebar {
     display: grid;
+    grid-template-rows: auto auto 1fr;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    gap: 25px;
+}
+
+.nav-li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.upper-nav-bar,
+.lower-nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 header {
@@ -23,6 +44,7 @@ header {
 
 .nav-bar {
     display: flex;
+    gap: 20px;
 }
 
 .bottom-header {
@@ -33,6 +55,7 @@ header {
 .left-bot-header {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .right-bot-header {
@@ -46,9 +69,10 @@ main {
 }
 
 .projects-container {
-    display: grid;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 75px;
 }
 
 .announcements-container {
@@ -61,4 +85,79 @@ main {
     display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+  
+.project-item {
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+  
+@media (max-width: 768px) {
+.projects-container {
+    flex-direction: column;
+    align-items: stretch;
+}
+    .project-item {
+     width: 100%;
+    }
+}
+
+.container-heading {
+    font-size: 1.5em; 
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+  
+.nav-bar-icon {
+    width: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-logo {
+    width: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 15px;
+}
+
+.search-bar input[type="text"] {
+    width: 35vw;
+}
+
+form {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.big-profile-logo {
+    width: 70px;
+    border-radius: 60px;
+    background-color: yellow;
+}
+
+.small-profile-logo {
+    width: 30px;
+    border-radius: 60px;
+    background-color: yellow;
+}
+
+.interaction-icon {
+    width: 24px;
+}
+
+.interaction-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
