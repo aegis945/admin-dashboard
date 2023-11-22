@@ -243,6 +243,7 @@ form {
 .trending-container,
 .announcements-container {
     box-shadow: 0px 2px 2px rgb(175, 175, 175);
+    background-color: white;
 }
 
 .project-name {
